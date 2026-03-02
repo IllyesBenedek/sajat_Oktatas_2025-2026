@@ -1,0 +1,50 @@
+body {
+    background-color: #DDFFDD;
+    color: #002200;
+    margin: auto;
+    width: 60%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.kepek  {
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+
+.kepek > img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+li {
+    font-weight: bold;
+}
+
+.utvonal {
+    font-weight: bold;
+}
+
+ul > p {
+    margin-bottom: 45px;
+}
+
+.kep {
+    margin: auto;
+    width: 350px;
+}
+
+.kiscim {
+    font-weight: bold;
+}
+
+.szoveg {
+    margin-left: 40px;
+}
+
+.csillag {
+    font-size: 40px;
+}
