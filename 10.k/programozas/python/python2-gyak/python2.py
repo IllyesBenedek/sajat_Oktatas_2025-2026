@@ -173,7 +173,10 @@ def parosok_kivalogatasa(parosok):
     
     Üres string esetén None a visszatérési érték.
 '''
-
+def elso_karakter(string):
+    if string == "":
+        return None
+    return string[0]
 
 
 #--------------------------
@@ -183,7 +186,12 @@ def parosok_kivalogatasa(parosok):
         amely a paraméterként átadott számokat tartalmazó lista
         pozitiv számait tartalmazza. 
 '''
-
+def pozitivok_kivalogatasa(pozitivok):
+    poz = []
+    for i in pozitivok:
+        if i > 0:
+            poz.append(i)
+    return poz
 
 
 #--------------------------

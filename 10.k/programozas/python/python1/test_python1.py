@@ -1,5 +1,6 @@
 # --- START OF FILE test_python1.py ---
 import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 import pytest
 import math
 import random
