@@ -4,11 +4,40 @@ hr {
     width: auto;
 }
 
+body {
+    color: #333333;
+    background-image: url("alap.jpg");
+    font-size: 15px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
 .hteg {
     text-align: center;
+    padding: 20px;
 }
 
 .bekezdes {
-    padding: 4px;
+    padding: 5px;
+}
+
+.bekezdes-male {
+    padding: 5px;
     text-align: center;
+}
+
+.lista-male {
+    padding: 5px;
+}
+
+.bekezdes-female {
+    padding: 5px;
+}
+
+.lista-female {
+    padding: 5px;
+}
+
+.lausanne {
+    text-align: right;
 }
