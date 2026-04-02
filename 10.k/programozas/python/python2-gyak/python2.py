@@ -113,7 +113,7 @@ def paratlanok_szama(paratlanok):
         return 0
     parat = 0
     for i in paratlanok:
-        if i % 2!= 0:
+        if i % 2 != 0:
             parat += 1
     return parat
 
@@ -204,7 +204,13 @@ def pozitivok_kivalogatasa(pozitivok):
     
     A visszatérési érték None, ha a betü nics benne a stringben.
 '''
-
+def kereses_a_stringben(string, betu):
+    index = 0
+    for i in string:
+        if i == betu:
+            return index
+        index += 1
+    return None
 
 
 #--------------------------
@@ -215,7 +221,11 @@ def pozitivok_kivalogatasa(pozitivok):
     Visszatérési értéke True, ha  a betü benne van a stringben.
     A visszatérési érték False, ha  a betü nics benne a stringben.
 '''
-
+def benne_van_a_stringben(string, betu):
+    for i in string:
+        if i == betu:
+            return True
+    return False
 
 
 #--------------------------
@@ -226,7 +236,11 @@ def pozitivok_kivalogatasa(pozitivok):
     
     Üres lista esetén 1 a visszatérési érték.
 '''
-
+def szorzat(sorzat):
+    szor = 1
+    for i in sorzat:
+        szor *= i
+    return szor
 
 
 #--------------------------
@@ -236,7 +250,14 @@ def pozitivok_kivalogatasa(pozitivok):
     
     Üres lista esetén 0 a visszatérési érték.
 '''
-
+def parosok_szama(parosok):
+    if parosok == []:
+        return 0
+    par = 0
+    for i in parosok:
+        if i % 2 == 0:
+            par += 1
+    return par
 
 
 #--------------------------
@@ -249,7 +270,11 @@ def pozitivok_kivalogatasa(pozitivok):
     
     Üres lista esetén a visszatérési érték False.
 '''
-
+def benne_van_a_listaban(lista, szam):
+    for i in lista:
+        if i == szam:
+            return True
+    return False
 
 
 #--------------------------
@@ -257,7 +282,13 @@ def pozitivok_kivalogatasa(pozitivok):
     A faktorialis nevű függvény,
     visszatér a paraméterként megkapott szám faktoriálisával.
 '''
-
+def faktorialis(n):
+    if n < 0:
+        return None
+    fakto = 1
+    for i in range(1, n + 1):
+        fakto *= i
+    return fakto
 
 
 #--------------------------
@@ -268,7 +299,14 @@ def pozitivok_kivalogatasa(pozitivok):
     
     Üres lista esetén 0 a visszatérési érték.
 '''
-
+def negativok_szama(negativok):
+    if negativok == []:
+        return 0
+    neg = 0
+    for i in negativok:
+        if i < 0:
+            neg += 1
+    return neg
 
 
 #--------------------------
@@ -278,7 +316,12 @@ def pozitivok_kivalogatasa(pozitivok):
         amely a paraméterként átadott számokat tartalmazó lista
         páratlan számait tartalmazza.
 '''
-
+def paratlanok_kivalogatasa(paratlanok):
+    parat = []
+    for i in paratlanok:
+        if i % 2 != 0:
+            parat.append(i)
+    return parat
 
 
 #======================================================================================================================C:\Users\bened\Downloads\sajat_Oktatas_2025-2026-main\sajat_Oktatas_2025-2026-main\10.k\programozas\python\python2-gyak
