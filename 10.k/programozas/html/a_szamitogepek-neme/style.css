@@ -41,3 +41,17 @@ body {
 .lausanne {
     text-align: right;
 }
+
+.kep-male img {
+    float: right;         
+    margin-left: auto;
+    margin-right: 150px;
+    width: 100px;  
+}
+
+.kep-female img {
+    float: right;
+    margin-left: auto;
+    margin-right: 150px;
+    width: 100px;
+}
