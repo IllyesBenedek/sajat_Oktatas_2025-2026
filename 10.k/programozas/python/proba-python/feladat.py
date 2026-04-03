@@ -81,7 +81,11 @@ def kettovel_oszthato(szam):
     Visszatérési értéke True, ha  a betü benne van a stringben.
     A visszatérési érték False, ha  a betü nics benne a stringben.
 '''
-
+def benne_van_a_stringben(string, betu):
+    for i in string:
+        if i == betu:
+            return True
+    return False
 
 
 #--------------------------
