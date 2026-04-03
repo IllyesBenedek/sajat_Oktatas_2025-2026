@@ -96,7 +96,8 @@ visszatér a két szám összegével.
 
 Nem használhatod a sum nevű függvényt!
 '''
-
+def osszead(szam1, szam2):
+    return szam1 + szam2
 
 
 #--------------------------
@@ -105,7 +106,12 @@ Feladat: Első karakter a szövegfájlban
 Írj egy függvényt elso_karakter_a_fajlban néven, amely visszatér egy szövegfájl első karakterével.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def elso_karakter_a_fajlban(fajnev):
+    with open(fajnev, "r") as f:
+        karakter = f.read()
+    if karakter == "":
+        return None
+    return karakter[0]
 
 
 #--------------------------
@@ -121,7 +127,14 @@ A Kocka osztály rendelkezik egy felszin() nevü metódussal,
     amely az osztály segítségével létrehozott objektum metódusaként 
     visszaadja az adott objektum felszínét.
 '''
-
+class Kocka:
+    def __init__(self, a):
+        self.a = a
+    def terfogat(self):
+        return self.a ** 3
+    def felszin(self):
+        return 6 * self.a * self.a
+        
 
 
 #--------------------------
@@ -131,7 +144,12 @@ A Kocka osztály rendelkezik egy felszin() nevü metódussal,
         amely a paraméterként átadott számokat tartalmazó lista
         páratlan számait tartalmazza.
 '''
-
+def paratlanok_kivalogatasa(paratlanok):
+    parat = []
+    for i in paratlanok:
+        if i % 2 != 0:
+            parat.append(i)
+    return parat
 
 
 #--------------------------
