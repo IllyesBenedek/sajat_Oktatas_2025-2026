@@ -160,7 +160,10 @@ def paratlanok_kivalogatasa(paratlanok):
     
     Üres string esetén None a visszatérési érték.
 '''
-
+def elso_karakter(string):
+    if string == "":
+        return None
+    return string[0]
 
 
 #--------------------------
@@ -169,7 +172,14 @@ Feladat: Hárommal osztható számok a szövegfájlban.
 Írj egy függvényt harommal_oszthato_szamok_a_fajlban néven, amely visszatér a szövegfájlban levő hárommal osztható számok listájával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def harommal_oszthato_szamok_a_fajlban(fajnev):
+    with open(fajnev, "r") as f:
+        szam = f.read().split()
+    harom = []
+    for i in szam:
+        if int(i) % 3 == 0:
+            harom.append(int(i))
+    return harom
 
 
 #--------------------------
@@ -178,7 +188,12 @@ A sorok_szama nevű függvény
 paraméterként egy fájlnevet kap és
 visszatér a fájlban levő sorok számával.
 '''
-
+def sorok_szama(fajnev):
+    with open(fajnev, "r") as f:
+        sorok = 0
+        for i in f:
+            sorok += 1
+        return sorok
 
 
 #--------------------------
@@ -187,7 +202,9 @@ A kor_terulete nevű függvény,
 bemenő paraméterként kapja a kör sugarát és 
 visszatér a kör területével.
 '''
-
+import math
+def kor_terulete(r):
+    return r ** 2 * math.pi
 
 
 #--------------------------
@@ -198,7 +215,12 @@ visszatér a kör területével.
     
     Üres lista esetén 0 a visszatérési érték.
 '''
-
+def negativok_szama(negativok):
+    neg = 0
+    for i in negativok:
+        if i < 0:
+            neg += 1
+    return neg
 
 
 #--------------------------
@@ -210,7 +232,14 @@ visszatér a kör területével.
     
     A feladat megoldása során nem használhatod a min() függvényt!
 '''
-
+def legkisebb(lista):
+    if lista == []:
+        return None
+    min = lista[0]
+    for i in lista:
+        if i < min:
+            min = i
+    return min
 
 
 #--------------------------
@@ -219,7 +248,13 @@ A szavak_szama nevű függvény
 paraméterként egy fájlnevet kap és
 visszatér a fájlban levő szavak számával.
 '''
-
+def szavak_szama(fajnev):
+    with open(fajnev, "r") as f:
+        szavak = f.read().split()
+        db = 0
+        for i in szavak:
+            db += 1
+        return db
 
 
 #--------------------------
@@ -228,7 +263,9 @@ Feladat: String fájlba írása
 A string_fajlba nevű függvény az első paraméterként kapott sztringet fájlba írja.
 A fájl nevét második paraméterként kapja meg a függvény.
 '''
-
+def string_fajlba(string, fajnev):
+    with open(fajnev, "w") as f:
+        f.write(string)
 
 
 #--------------------------
@@ -244,7 +281,14 @@ A Teglalap osztály rendelkezik egy terulet() nevü metódussal,
     amely az osztály segítségével létrehozott objektum metódusaként 
         visszaadja az adott objektum területét.
 '''
-
+class Teglalap:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def terulet(self):
+        return self.a * self.b
+    def kerulet(self):
+        return 2 * self.a + 2 * self.b
 
 
 #--------------------------
@@ -255,7 +299,11 @@ A Teglalap osztály rendelkezik egy terulet() nevü metódussal,
     Üres lista esetén 0 a visszatérési érték.
     A feladat megoldása során nem használhatod a sum() függvényt!
 '''
-
+def osszeg(lista):
+    ossz = 0
+    for i in lista:
+        ossz += i
+    return ossz
 
 
 #======================================================================================================================C:\Users\bened\Downloads\sajat_Oktatas_2025-2026\10.k\programozas\python\proba-python
