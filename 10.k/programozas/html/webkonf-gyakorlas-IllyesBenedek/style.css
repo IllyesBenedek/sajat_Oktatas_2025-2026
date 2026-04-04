@@ -41,3 +41,39 @@ h1 {
 footer {
     text-align: center;
 }
+
+.navmenu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.program {
+    margin: 40px 0;
+}
+
+.eloadok-lista {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eloadok-lista article {
+    width: 30%;
+    text-align: center;
+}
+
+.eloadok-lista img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.eloadok-lista h4 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+section {
+    margin-top: 40px;
+}
