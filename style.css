@@ -37,3 +37,18 @@ footer {
 .bemutato > p {
     font-style: italic;
 }
+
+.latvanyok {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.latvany > h3 {
+    text-align: center;
+    color: #060;
+}
+
+.erdekessegek  li {
+    font-size: 18px;
+    margin-top: 10px;
+}
