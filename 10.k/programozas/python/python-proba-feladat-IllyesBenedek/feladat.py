@@ -6,7 +6,11 @@
     Üres lista esetén 0 a visszatérési érték.
     A feladat megoldása során nem használhatod a sum() függvényt!
 '''
-
+def osszeg(lista):
+    ossz = 0
+    for i in lista:
+        ossz += i
+    return ossz
 
 #--------------------------
 '''
@@ -14,7 +18,14 @@ Feladat: Hárommal osztható számok a szövegfájlban.
 Írj egy függvényt harommal_oszthato_szamok_a_fajlban néven, amely visszatér a szövegfájlban levő hárommal osztható számok listájával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def harommal_oszthato_szamok_a_fajlban(fajlnev):
+    with open(fajlnev, "r") as f:
+        szamok = f.read().split()
+    szam = []
+    for i in szamok:
+        if int(i) % 3 == 0:
+            szam.append(int(i))
+    return szam
 
 
 #--------------------------
@@ -25,7 +36,11 @@ visszatér a nagyobb számmal.
 
 Nem használhatod a max nevű függvényt.
 '''
-
+def nagyobb(szam1, szam2):
+    if szam1 > szam2:
+        return szam1
+    else:
+        return szam2
 
 #--------------------------
 ''' 
@@ -35,7 +50,12 @@ Nem használhatod a max nevű függvényt.
     
     Üres lista esetén 0 a visszatérési érték.
 '''
-
+def negativok_szama(negativok):
+    neg = 0
+    for i in negativok:
+        if i < 0:
+            neg += 1
+    return neg
 
 
 #--------------------------
@@ -44,7 +64,9 @@ Feladat: String fájlba írása
 A string_fajlba nevű függvény az első paraméterként kapott sztringet fájlba írja.
 A fájl nevét második paraméterként kapja meg a függvény.
 '''
-
+def string_fajlba(string, fajnev):
+    with open(fajnev, "w") as f:
+        f.write(string)
 
 
 #--------------------------
@@ -53,7 +75,12 @@ A sorok_szama nevű függvény
 paraméterként egy fájlnevet kap és
 visszatér a fájlban levő sorok számával.
 '''
-
+def sorok_szama(fajnev):
+    with open(fajnev, "r") as f:
+        db = 0
+        for i in f:
+            db += 1
+        return db
 
 
 #--------------------------
@@ -63,7 +90,13 @@ paraméterként egy fájlnevet kap és
 visszatér a fájlban levő karakterek számával. 
 ('\n karakterekkel együtt')
 '''
-
+def karakterek_szama(fajnev):
+    with open(fajnev, "r") as f:
+        karakterek = f.read()
+        db = 0
+        for i in karakterek:
+            db += 1
+        return db
 
 
 #--------------------------
@@ -72,7 +105,14 @@ visszatér a fájlban levő karakterek számával.
     paraméterként egy számokat tartalmazó listát kap és
     visszatér a lista számainak átlagával.
 '''
-
+def lista_atlag(lista):
+    if lista == []:
+        return 0
+    atlag = 0
+    for i in lista:
+        atlag += i
+    return atlag / len(lista)
+        
 
 
 #--------------------------
@@ -81,7 +121,14 @@ A szavak_szama nevű függvény
 paraméterként egy fájlnevet kap és
 visszatér a fájlban levő szavak számával.
 '''
-
+def szavak_szama(fajnev):
+    with open(fajnev, "r") as f:
+        szavak = f.read().split()
+    db = 0
+    for i in szavak:
+        db += 1
+    return db
+    
 
 
 #--------------------------
@@ -93,7 +140,14 @@ visszatér a fájlban levő szavak számával.
     
     A feladat megoldása során nem használhatod a min() függvényt!
 '''
-
+def legkisebb(lista):
+    if lista == []:
+        return None
+    min = lista[0]
+    for i in lista:
+        if i < min:
+            min = i
+    return min
 
 #--------------------------
 '''
