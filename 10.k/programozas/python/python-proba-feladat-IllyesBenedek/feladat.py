@@ -156,7 +156,12 @@ def legkisebb(lista):
         amely a paraméterként átadott számokat tartalmazó lista
         páratlan számait tartalmazza.
 '''
-
+def paratlanok_kivalogatasa(paratlanok):
+    parat = []
+    for i in paratlanok:
+        if i % 2 != 0:
+            parat.append(i)
+    return parat
 
 
 #--------------------------
@@ -167,7 +172,8 @@ visszatér a két szám összegével.
 
 Nem használhatod a sum nevű függvényt!
 '''
-
+def osszead(szam1, szam2):
+    return szam1 + szam2
 
 #--------------------------
 '''
@@ -175,7 +181,12 @@ Feladat: Első karakter a szövegfájlban
 Írj egy függvényt elso_karakter_a_fajlban néven, amely visszatér egy szövegfájl első karakterével.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def elso_karakter_a_fajlban(fajnev):
+    with open(fajnev, "r") as f:
+        karakter = f.read()
+    if karakter == "":
+        return None
+    return karakter[0]
 
 
 #--------------------------
@@ -191,7 +202,14 @@ A Teglalap osztály rendelkezik egy terulet() nevü metódussal,
     amely az osztály segítségével létrehozott objektum metódusaként 
         visszaadja az adott objektum területét.
 '''
-    
+class Teglalap:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def terulet(self):
+        return self.a * self.b
+    def kerulet(self):
+        return 2 * self.a + 2 * self.b    
 
 
 #--------------------------
@@ -200,7 +218,16 @@ Feladat: Legkisebb szám egy szövegfájlban.
 Írj egy függvényt legkisebb_szam_a_fajlban néven, amely visszatér egy szövegfájlban levő lekisebb számmal.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def legkisebb_szam_a_fajlban(fajnev):
+    with open(fajnev, "r") as f:
+        lista = f.read().split()
+    if lista == []:
+        return None
+    min = int(lista[0])
+    for i in lista:
+        if int(i) < min:
+            min = int(i)
+    return min
 
 
 
@@ -210,7 +237,9 @@ A kor_terulete nevű függvény,
 bemenő paraméterként kapja a kör sugarát és 
 visszatér a kör területével.
 '''
-
+import math
+def kor_terulete(r):
+    return r **2 * math.pi
 
 
 #--------------------------
@@ -221,7 +250,10 @@ visszatér a kör területével.
     
     Üres string esetén None a visszatérési érték.
 '''
-
+def elso_karakter(karakter):
+    if karakter == "":
+        return None
+    return karakter[0]
 
 
 #--------------------------
@@ -237,7 +269,13 @@ A Kocka osztály rendelkezik egy felszin() nevü metódussal,
     amely az osztály segítségével létrehozott objektum metódusaként 
     visszaadja az adott objektum felszínét.
 '''
-
+class Kocka:
+    def __init__(self, a):
+        self.a = a
+    def felszin(self):
+        return 6 * self.a * self.a
+    def terfogat(self):
+        return self.a ** 3
 
 
 
@@ -249,7 +287,11 @@ A Kocka osztály rendelkezik egy felszin() nevü metódussal,
     Visszatérési értéke True, ha  a betü benne van a stringben.
     A visszatérési érték False, ha  a betü nics benne a stringben.
 '''
-
+def benne_van_a_stringben(string, betu):
+    for i in string:
+        if i == betu:
+            return True
+    return False
 
 #--------------------------
 '''
@@ -258,6 +300,7 @@ egy számot kap bemenetként és
 visszatér True-val, ha a szám kettővel osztható és 
 visszatér False-al ha a szám kettővel nem ossztható.
 '''
-
+def kettovel_oszthato(szam):
+    return szam % 2 == 0
 
 #======================================================================================================================/home/tanulok/illben9646/Dokumentumok/python-proba-feladat-IllyesBenedek-main
