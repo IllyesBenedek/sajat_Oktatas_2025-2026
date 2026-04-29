@@ -54,7 +54,7 @@ visszatér a fájlban levő karakterek számával.
 def karakterek_szama(fajnev):
     with open(fajnev, "r") as f:
         karakter = f.read()
-    return len(karakter)        
+    return len(karakter)
 
 
 #--------------------------
@@ -63,7 +63,7 @@ def karakterek_szama(fajnev):
     paraméterként egy számokat tartalmazó listát kap és
     visszatér a lista legkisebb számával.
     Üres lista esetén None a visszatérési érték.
-    
+
     A feladat megoldása során nem használhatod a min() függvényt!
 '''
 def legkisebb(lista):
@@ -281,10 +281,12 @@ Feladat: Első karakter a szövegfájlban
 Írj egy függvényt elso_karakter_a_fajlban néven, amely visszatér egy szövegfájl első karakterével.
 A függvény bemenő paramétere a fájl neve.
 '''
-def elso_karakter_a_fajlban(fajnev):
-    with open(fajnev, "r") as f:
-        karaakter = f.read(1)
-    return karaakter
+def elso_karakter_a_fajlban(fajnev):    # def elso_karakter_a_fajlban(fajnev):
+    with open(fajnev, "r") as f:            # With open(fajnev, "r") as f:
+        karaakter = f.read()                    # karakter = f.read(1)
+    if karaakter == "":                     # return karakter
+        return None
+    return karaakter[0]
 
 
 #--------------------------
