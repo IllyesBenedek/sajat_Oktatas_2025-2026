@@ -300,5 +300,5 @@ def szavak_szama(fajnev):
         szo = f.read().split()
     return len(szo)
 
-
+# minden jó
 #======================================================================================================================C:\beni\Informatika\10.k\Programozás\proba-python
