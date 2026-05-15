@@ -213,6 +213,7 @@ def string_fajlba(string, fajnev):
 
 
 
+
 #--------------------------
 '''
 Az osszead nevű nevű függvény,
