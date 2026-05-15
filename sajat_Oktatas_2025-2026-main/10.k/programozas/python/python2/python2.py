@@ -13,6 +13,7 @@ def lista_atlag(lista):
     return atlag / len(lista)
 
 
+
 #--------------------------
 ''' 
     A parosok_szama  nevű függvény,
