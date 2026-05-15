@@ -1,6 +1,10 @@
 vez_1 = input("Első vezetéknév: ")
 vez_2 = input("Második vezetéknév: ")
 ker_1 = input("Első keresztnév: ")
-ker_2 = input("Második kersztnév: ")
+ker_2 = input("Második keresztnév: ")
 
-print(vez_1, ker_1, vez_1, ker_2, vez_2, ker_1, vez_2, ker_2)
+print("\nA lehetséges névvariációk:")
+print(f"1. {vez_1} {ker_1}")
+print(f"2. {vez_1} {ker_2}")
+print(f"3. {vez_2} {ker_1}")
+print(f"4. {vez_2} {ker_2}")
