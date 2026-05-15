@@ -13,6 +13,7 @@ def osszeg(lista):
     return szam
 
 
+
 #--------------------------
 ''' 
     A lista_atlag nevű függvény,
