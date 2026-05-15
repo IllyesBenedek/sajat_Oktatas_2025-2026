@@ -14,6 +14,7 @@ def lista_atlag(lista):
 
 
 
+
 #--------------------------
 ''' 
     A parosok_szama  nevű függvény,
