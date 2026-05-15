@@ -16,5 +16,4 @@ with open("nyelvek.txt", "r", encoding="UTF-8") as forrasfajl:
                     "teljes_nev": reszek[2].strip() + " " + reszek[3].strip(),
                 }
                 adatok.append(nyelv)
-
 print(adatok)
