@@ -209,7 +209,8 @@ A fájl nevét második paraméterként kapja meg a függvény.
 '''
 def string_fajlba(string, fajnev):
     with open(fajnev, "w") as f:
-     f.write(string)   
+     f.write(string)
+   
 
 
 #--------------------------
