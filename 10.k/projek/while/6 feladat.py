@@ -10,3 +10,4 @@ for i in range(20):
 
 print("---")
 print("Talált számok mennyisége:", darab)
+print("---")
