@@ -5,7 +5,6 @@ with open("parduc.txt", "r", encoding="UTF-8") as versfajl:
     mag_szama = 0
     maganhangzok = "aeiouáéíóöőúüűAEIOUÁÉÍÓÖŐÚÜŰ"
 
-    # Egyetlen ciklusban megszámolunk mindent
     for karakter in vers_szovege:
         if karakter.isalpha():
             betuk_szama += 1
