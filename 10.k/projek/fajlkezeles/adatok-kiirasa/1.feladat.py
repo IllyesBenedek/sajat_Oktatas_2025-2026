@@ -1,4 +1,5 @@
 fajl = []
+
 with open("nyelvek.txt", "r", encoding="UTF-8") as adatfajl:
     with open("nyelvek_masolata.txt", "w", encoding="UTF-8") as celfajl:
         adatfajl.readline()
