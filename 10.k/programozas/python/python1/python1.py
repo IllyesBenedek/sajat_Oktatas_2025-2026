@@ -8,6 +8,7 @@ def teglalap_kerulet(a, b):
     return 2 * a + 2 * b
 
 
+
 #--------------------------
 '''
 A teglalap_terulet nevű függvény,

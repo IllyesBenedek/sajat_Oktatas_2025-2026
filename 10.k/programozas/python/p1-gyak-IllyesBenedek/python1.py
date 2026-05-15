@@ -242,4 +242,5 @@ False-al ha a szám páratlan.
 def paros(szam):
     return szam % 2 == 0
 
+
 #======================================================================================================================/home/users/students/w10k1/k10illyes/Downloads/p1-gyak-IllyesBenedek-main
