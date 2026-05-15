@@ -303,4 +303,5 @@ visszatér False-al ha a szám kettővel nem ossztható.
 def kettovel_oszthato(szam):
     return szam % 2 == 0
 
+
 #======================================================================================================================/home/tanulok/illben9646/Dokumentumok/python-proba-feladat-IllyesBenedek-main
