@@ -1,4 +1,5 @@
-arfolyam = float(input("Euró árfolyam :"))
+arfolyam = float(input("Euró árfolyam: "))
 euro = float(input("Hány eurót váltasz? "))
 forint = euro * arfolyam
-print(euro, "euró", forint, "forint.")
+
+print(euro, "euró értéke", forint, "forint.")
