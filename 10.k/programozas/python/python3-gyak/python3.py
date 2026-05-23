@@ -85,7 +85,7 @@ visszatér a  fájlban levő leghosszabb sor hosszával.
 '''
 def leghosszabb_sor_hossza(fajnev):
     with open(fajnev) as f:
-        sorok = f.read()
+        sorok = f.readlines()
     leghosszab = 0
     for i in sorok:
         if len(i) > leghosszab:
@@ -99,7 +99,11 @@ Feladat: String fájlba írása
 A string_fajlba nevű függvény az első paraméterként kapott sztringet fájlba írja.
 A fájl nevét második paraméterként kapja meg a függvény.
 '''
+def string_fajlba(string, fajnev):
+    with open(fajnev, "w") as f:
+        f.write(string)
 
+        
 
 
 #--------------------------
@@ -108,7 +112,14 @@ Feladat: Negatív számok száma egy szövegfájlban.
 Írj egy függvényt negativ_szamok_szama_a_fajlban néven, amely visszatér egy szövegfájlban levő negativ számok számával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def negativ_szamok_szama_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        negativok = f.read().split()
+    neg = 0
+    for i in negativok:
+        if int(i) < 0:
+            neg += 1
+    return neg
 
 
 #--------------------------
@@ -117,7 +128,14 @@ Feladat: Páratlanok egy szövegfájlból.
 Írj egy függvényt paratlanok_a_fajlbol néven, amely visszatér a szövegfájlban levő páratlan számokkal mint listával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def paratlanok_a_fajlbol(fajnev):
+    with open(fajnev) as f:
+        paratlanok = f.read().split()
+    parat = []
+    for i in paratlanok:
+        if int(i) % 2 != 0:
+            parat.append(int(i))
+    return parat
 
 
 #--------------------------
@@ -126,7 +144,10 @@ A szavak_szama nevű függvény
 paraméterként egy fájlnevet kap és
 visszatér a fájlban levő szavak számával.
 '''
-
+def szavak_szama(fajnev):
+    with open(fajnev) as f:
+        szama = f.read().split()
+    return len(szama)
 
 
 #--------------------------
