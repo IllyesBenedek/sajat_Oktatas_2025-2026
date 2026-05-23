@@ -163,6 +163,13 @@ A Kocka osztály rendelkezik egy felszin() nevü metódussal,
     amely az osztály segítségével létrehozott objektum metódusaként 
     visszaadja az adott objektum felszínét.
 '''
+class Kocka:
+    def __init__(self, a):
+        self.a = a
+    def felszin(self):
+        return 6 * self.a ** 2
+    def terfogat(self):
+        return self.a ** 3
 
 
 
@@ -172,7 +179,13 @@ Feladat: Számok összege egy szövegfájlban.
 Írj egy függvényt szamok_osszege_a_fajlban néven amely visszatér egy szövegfájlban levő számok összegével.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def szamok_osszege_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        szamok = f.read().split()
+    osszeg = 0
+    for i in szamok:
+        osszeg += int(i)
+    return osszeg
 
 
 #--------------------------
@@ -181,7 +194,10 @@ A sorok_szama nevű függvény
 paraméterként egy fájlnevet kap és
 visszatér a fájlban levő sorok számával.
 '''
-
+def sorok_szama(fajnev):
+    with open(fajnev) as f:
+        sorok = f.readlines()
+    return len(sorok)
 
 
 #--------------------------
@@ -190,7 +206,16 @@ Feladat: Legkisebb szám egy szövegfájlban.
 Írj egy függvényt legkisebb_szam_a_fajlban néven, amely visszatér egy szövegfájlban levő lekisebb számmal.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def legkisebb_szam_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        lista = f.read().split()
+    if lista == []:
+        return None
+    min = int(lista[0])
+    for i in lista:
+        if int(i) < min:
+            min = int(i)
+    return min
 
 
 #--------------------------
@@ -199,7 +224,12 @@ Feladat: Utolsó karakter a szövegfájlban
 Írj egy függvényt utolso_karakter_a_fajlban néven, amely visszatér egy szövegfájl utolsó karakterével.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def utolso_karakter_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        string = f.read()
+    if string == "":
+        return None
+    return string[-1]
 
 
 #--------------------------
@@ -215,7 +245,14 @@ A Teglalap osztály rendelkezik egy terulet() nevü metódussal,
     amely az osztály segítségével létrehozott objektum metódusaként 
         visszaadja az adott objektum területét.
 '''
-
+class Teglalap:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def kerulet(self):
+        return 2 * (self.a + self.b)
+    def terulet(self):
+        return self.a * self.b
 
 
 #--------------------------
@@ -224,7 +261,12 @@ Feladat: Első karakter a szövegfájlban
 Írj egy függvényt elso_karakter_a_fajlban néven, amely visszatér egy szövegfájl első karakterével.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def elso_karakter_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        string = f.read()
+    if string == "":
+        return None
+    return string[0]
 
 
 #--------------------------
@@ -234,7 +276,10 @@ Készíts függvényt szaz_szam_fajlba néven, amely 1-tól 100-ig egyesével ki
 Minden szám kerüljön új sorba.
 A fájl nevét paraméterként kapja meg a függvény.
 '''
-
+def szaz_szam_fajlba(fajnev):
+    with open(fajnev, "w") as f:
+        for i in range(1, 101):
+            f.write(str(i) + "\n")
 
 
 #--------------------------
@@ -243,7 +288,14 @@ Feladat: Hárommal osztható számok a szövegfájlban.
 Írj egy függvényt harommal_oszthato_szamok_a_fajlban néven, amely visszatér a szövegfájlban levő hárommal osztható számok listájával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def harommal_oszthato_szamok_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        szamok = f.read().split()
+    haraom = []
+    for i in szamok:
+        if int(i) % 3 == 0:
+            haraom.append(int(i))
+    return haraom
 
 
 #--------------------------
@@ -255,13 +307,23 @@ visszatér a  fájlban levő "lorem" szavak számával.
 
 
 
+
 #--------------------------
 '''
 Feladat: Legnagyobb szám egy szövegfájlban.
 Írj egy függvényt legnagyobb_szam_a_fajlban néven, amely visszatér egy szövegfájlban levő legnagyobb számmal.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def legnagyobb_szam_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        lista = f.read().split()
+    if lista == []:
+        return None
+    max = int(lista[0])
+    for i in lista:
+        if int(i) > max:
+            max = int(i)
+    return max
 
 
 #--------------------------
