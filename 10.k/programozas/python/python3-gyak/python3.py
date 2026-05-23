@@ -304,7 +304,14 @@ A lorem_szavak_szama nevű függvény
 paraméterként egy fájlnevet kap és
 visszatér a  fájlban levő "lorem" szavak számával.
 '''
-
+def lorem_szavak_szama(fajnev):
+    with open(fajnev) as f:
+        szavak = f.read().split()
+    darab = 0
+    for i in szavak:
+        if "lorem" in i.lower():
+            darab += 1
+    return darab
 
 
 
@@ -339,7 +346,13 @@ A Negyzet osztály rendelkezik egy terulet() nevü metódussal,
     amely az osztály segítségével létrehozott objektum metódusaként 
         visszaadja az adott objektum területét.
 '''
-
+class Negyzet:
+    def __init__(self, a):
+        self.a = a
+    def kerulet(self):
+        return 4 * self.a
+    def terulet(self):
+        return self.a ** 2
 
 
 #--------------------------
@@ -348,6 +361,14 @@ Feladat: Leggyakoribb szám a szövegfájlban.
 Írj egy függvényt leggyakoribb_szam_a_fajlban néven, amely visszatér a szövegfájlban levő leggyakoribb számmal.
 A függvény bemenő paramétere a fájl neve.
 '''
+def leggyakoribb_szam_a_fajlban(fajlnev):
+    with open(fajlnev, "r") as f:
+        szamok = f.read().split()
+    leggyakoribb = szamok[0]
+    for i in szamok:
+        if szamok.count(i) > szamok.count(leggyakoribb):
+            leggyakoribb = int(i)
+    return int(leggyakoribb)
 
 
 
@@ -358,7 +379,14 @@ A neggyel_oszthato_szamok_a_fajlban függvény
 egy függvényt neggyel_oszthato_szamok_a_fajlban néven, amely visszatér a szövegfájlban levő neggyel osztható számok listájával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def neggyel_oszthato_szamok_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        szam = f.read().split()
+    negy = []
+    for i in szam:
+        if int(i) % 4 == 0:
+            negy.append(int(i))
+    return negy
 
 
 #--------------------------
@@ -367,7 +395,14 @@ Az r_betuk_szama nevű függvény
 paraméterként egy fájlnevet kap és
 visszatér a fájlban levő 'r' betük számával.
 '''
-
+def r_betuk_szama(fajnev):
+    with open(fajnev, "r") as f:
+        r_betu = f.read()
+    szama = 0
+    for i in r_betu:
+        if i == "r":
+            szama += 1
+    return szama
 
 
 #--------------------------
@@ -376,7 +411,14 @@ Feladat: Negatívok egy szövegfájlból.
 Írj egy függvényt negativok_a_fajlbol néven, amely visszatér a szövegfájlban levő negativ számokkal mint listával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def negativok_a_fajlbol(fajnev):
+    with open(fajnev) as f:
+        szamok = f.read().split()
+    neg = []
+    for i in szamok:
+        if int(i) < 0:
+            neg.append(int(i))
+    return neg
 
 
 #--------------------------
@@ -385,7 +427,14 @@ Feladat: Pozitív számok száma egy szövegfájlban.
 Írj egy függvényt pozitiv_szamok_szama_a_fajlban néven, amely visszatér egy szövegfájlban levő pozitiv számok számával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def pozitiv_szamok_szama_a_fajlban(fajnev):
+    with open(fajnev) as f:
+        pozitivok = f.read().split()
+    poz = 0
+    for i in pozitivok:
+        if int(i) % 2 == 0:
+            poz += 1
+    return poz
 
 
 #--------------------------
@@ -394,7 +443,14 @@ Feladat: Pozitívok egy szövegfájlból.
 Írj egy függvényt pozitiv_a_fajlbol néven, amely visszatér a szövegfájlban levő pozitiv számokkal mint listával.
 A függvény bemenő paramétere a fájl neve.
 '''
-
+def pozitiv_a_fajlbol(fajlnev):
+    with open(fajlnev) as f:
+        szamok = f.read().split()
+    poz = []
+    for i in szamok:
+        if int(i) > 0:
+            poz.append(int(i))
+    return poz
 
 
 #--------------------------
@@ -404,7 +460,10 @@ paraméterként egy fájlnevet kap és
 visszatér a fájlban levő karakterek számával. 
 ('\n karakterekkel együtt')
 '''
-
+def karakterek_szama(fajnev):
+    with open(fajnev) as f:
+        karakterek = f.read()
+    return len(karakterek)
 
 
 #======================================================================================================================C:\Users\bened\Downloads\sajat_Oktatas_2025-2026-main\sajat_Oktatas_2025-2026-main\10.k\programozas\python\python3-main\python3-main
