@@ -1,5 +1,5 @@
 szo = None
 while szo != "":
-    szo = input("adj meg szavakat! ha kilépnél,a szó helyett csak egy EN üss!")
+    szo = input("Adj meg szavakat! Ha kilépnél, nyomj csak egy ENTER-t: ")
 
-print("program vége")
+print("Program vége")

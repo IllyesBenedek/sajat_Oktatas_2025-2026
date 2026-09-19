@@ -1,6 +1,3 @@
-# forrasfajl = open("adatbeolvasas/szamozott_sorok.txt")
-
-# forrasfajl.close()
 
 autok = []
 with open("autok_listaja.csv", "r", encoding="UTF-8") as forrasfajl:
