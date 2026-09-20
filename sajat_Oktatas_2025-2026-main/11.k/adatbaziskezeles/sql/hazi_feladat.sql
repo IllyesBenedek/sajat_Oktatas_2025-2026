@@ -19,5 +19,5 @@ VALUES (4, "A futball története", 4);
 INSERT  INTO kedvenc_konyvek
 VALUES (5, "A futball taktikai evolúciója", 4);
 
-SELECT *
-FROM   kedvenc_konyvek;
+SELECT * FROM   kedvenc_konyvek;
+
