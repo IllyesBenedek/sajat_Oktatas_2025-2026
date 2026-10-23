@@ -1,0 +1,1 @@
+SELECT COUNT(id),category FROM products GROUP BY category ORDER BY COUNT(id);

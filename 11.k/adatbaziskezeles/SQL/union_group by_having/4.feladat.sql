@@ -1,0 +1,1 @@
+select COUNT(id) ,city from customers group BY city HAVING COUNT(id) > 2 ORDER BY COUNT(id);

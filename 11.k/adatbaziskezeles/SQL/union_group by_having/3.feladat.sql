@@ -1,0 +1,1 @@
+select COUNT(id),ship_city from orders group BY ship_city ORDER by COUNT(id);
