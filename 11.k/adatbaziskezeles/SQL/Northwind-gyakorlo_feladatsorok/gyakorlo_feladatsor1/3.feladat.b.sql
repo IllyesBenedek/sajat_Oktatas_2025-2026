@@ -1,0 +1,1 @@
+SELECT MAX(list_price)AS legdrágább, product_name FROM products;
