@@ -1,0 +1,1 @@
+SELECT AVG(list_price)AS átlaga FROM products;
