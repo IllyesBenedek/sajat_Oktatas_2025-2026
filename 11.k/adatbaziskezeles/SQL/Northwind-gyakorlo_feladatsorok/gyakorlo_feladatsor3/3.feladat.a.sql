@@ -1,0 +1,1 @@
+SELECT min(list_price)AS legolcsóbb FROM products;

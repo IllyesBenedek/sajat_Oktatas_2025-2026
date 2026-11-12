@@ -1,0 +1,1 @@
+SELECT ship_city, COUNT(*)AS rendelesek_szama FROM orders GROUP BY ship_city;
